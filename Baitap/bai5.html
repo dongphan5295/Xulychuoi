@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isDatemonthyear(str) {
+            regexp = /^(0[1-9]|[12][0-9]|3[01])[\/](0[1-9]|1[012])[\/](19|20)\d\d$/
+            if (regexp.test(str)) {
+                return true;
+            }
+            return false;
+        }
+        // let num = prompt('Emter date/month/year');
+        // console.log(isDatemonthyear(num));
+            function countWords(str) {
+                return str.trim().split(/\s+/).length;
+            }
+            // word = prompt('Enter a string')
+            // console.log(countWords(word));
+            function isCheck(str) {
+                let check = str.match(/[aeuio]/g).length;
+                str = str.trim().split(/\s+/).join('').length;
+                // console.log("TCL: isCheck -> check", check)
+                return (`Count of vowel : ${check} Count of consonant : ${(str)-check}`);
+                    
+            }
+            // let word = prompt('Enter a word');
+            // console.log(isCheck(word));
+            function isValidatecode(str){
+                regexp = /^[A-Z][a-z0-9\W]*$/
+                if(regexp.test(str)){
+                    return true ;
+                }
+                return false ;
+            }
+            // code = prompt('Enter your code ');
+            // console.log(isValidatecode(code))
+
+    </script>
+</body>
+
+</html>
